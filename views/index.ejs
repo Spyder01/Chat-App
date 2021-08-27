@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="./styles/styles.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <title>Chat App</title>
+</head>
+
+
+<body class="dark">
+   
+ <!--Navbar Component--> 
+    <nav class="navbar navbar-expand-sm dark" id="navBar">
+        <div class="navbar-brand">Chat App</div>
+        <ul class="navbar-nav">
+         <!--   <li class="nav-item">
+                <span id="chat-link">Chat</span>
+            </li>
+            <li class="nav-item">
+                <span id="history-link">History</span>
+            </li> -->
+            <li class="nav-item" id="Log-Out">
+                <span>LogOut</span>
+            </li>
+        </ul>
+
+        <span class="nav-name" id="navName"></span>
+    </nav>
+
+ <!--Main Area--> 
+    <div class="co">
+
+        <!--Login Area Component-->
+        <section class="flex-container login" id="login">
+            <div class="content-container" id="loginBox">
+                <form class="form-container login-form form-group" id="loginForm">
+                    
+                <h1 class="heading">
+                    Login
+                </h1>
+                <br>
+                <br>
+                <span class="subtitle">USERNAME:</span>
+                <br>
+                <input type="text" name="username" value="" required>
+                <br>
+                <span class="subtitle">FULL NAME:</span>
+                <br>
+                <input type="text" name="fullname" value="" required>
+                <br><br>
+                <input type="submit" value="SUBMIT" class="submit-btn">
+                </form>
+
+            </div>
+        </section>
+
+        <!--Chat Section Component-->
+        <section class="chat-section" id="chat-section">
+            <div class="chat-container" id="chat-container">
+             <div id="chatting">
+              <div class="test">  
+                <div class="msg right-msg">
+                    <div class="msg-bubble">
+                       <div class="msg-info">
+                        <div class="msg-info-name">
+                            Suhan
+                        </div>
+                        <div class="msg-info-time">
+                            12:56
+                        </div>
+                        </div>
+                        <div class="msg-text">
+                            Hello, There My name is Suhan nice to meet you all!!
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <form class="msg-inputArea navbar fixed-bottom" id="msg-inputArea">
+                <input type="text" class="msg-input" id="msg-input" name="msg-input" placeholder="Enter your message...">
+                <button type="submit" class="msg-send-btn">Send</button>
+            </form>
+        </div>
+            </div>
+
+        </section>
+
+    </div>
+ 
+    <script src="https://cdn.socket.io/3.1.3/socket.io.min.js" integrity="sha384-cPwlPLvBTa3sKAgddT6krw0cJat7egBga3DJepJyrLl4Q9/5WLra3rrnMcyTyOnh" crossorigin="anonymous"></script>
+    <script src="./js/app.js" defer></script>
+</body>
+
+</html>
